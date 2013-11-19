@@ -2,133 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <title>YouTube Player API Sample</title>
-    <style type="text/css">
-      #videoDiv { 
-        margin-right: 3px;
-      }
-      #videoInfo {
-        margin-left: 3px;
-      }
-    </style>
-    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-    <script type="text/javascript">
-      google.load("swfobject", "2.1");
-    </script>    
-    <script type="text/javascript">
-      /*
-       * Chromeless player has no controls.
-       */
-      
-      // Update a particular HTML element with a new value
-      function updateHTML(elmId, value) {
-        document.getElementById(elmId).innerHTML = value;
-      }
-      
-      // This function is called when an error is thrown by the player
-      function onPlayerError(errorCode) {
-        alert("An error occured of type:" + errorCode);
-      }
-      
-      // This function is called when the player changes state
-      function onPlayerStateChange(newState) {
-        updateHTML("playerState", newState);
-      }
-      
-      // Display information about the current state of the player
-      function updatePlayerInfo() {
-        // Also check that at least one function exists since when IE unloads the
-        // page, it will destroy the SWF before clearing the interval.
-        if(ytplayer && ytplayer.getDuration) {
-          updateHTML("videoDuration", ytplayer.getDuration());
-          updateHTML("videoCurrentTime", ytplayer.getCurrentTime());
-          updateHTML("bytesTotal", ytplayer.getVideoBytesTotal());
-          updateHTML("startBytes", ytplayer.getVideoStartBytes());
-          updateHTML("bytesLoaded", ytplayer.getVideoBytesLoaded());
-          updateHTML("volume", ytplayer.getVolume());
-        }
-      }
-      
-      // Allow the user to set the volume from 0-100
-      function setVideoVolume() {
-        var volume = parseInt(document.getElementById("volumeSetting").value);
-        if(isNaN(volume) || volume < 0 || volume > 100) {
-          alert("Please enter a valid volume between 0 and 100.");
-        }
-        else if(ytplayer){
-          ytplayer.setVolume(volume);
-        }
-      }
-      
-      function playVideo() {
-        if (ytplayer) {
-          ytplayer.playVideo();
-        }
-      }
-      
-      function pauseVideo() {
-        if (ytplayer) {
-          ytplayer.pauseVideo();
-        }
-      }
-      
-      function muteVideo() {
-        if(ytplayer) {
-          ytplayer.mute();
-        }
-      }
-      
-      function unMuteVideo() {
-        if(ytplayer) {
-          ytplayer.unMute();
-        }
-      }
-      
-      
-      // This function is automatically called by the player once it loads
-      function onYouTubePlayerReady(playerId) {
-        ytplayer = document.getElementById("ytPlayer");
-        // This causes the updatePlayerInfo function to be called every 250ms to
-        // get fresh data from the player
-        setInterval(updatePlayerInfo, 250);
-        updatePlayerInfo();
-        ytplayer.addEventListener("onStateChange", "onPlayerStateChange");
-        ytplayer.addEventListener("onError", "onPlayerError");
-        //Load an initial video into the player
-        ytplayer.cueVideoById("aHDNmTpqi7w");
-      }
-      
-      // The "main method" of this sample. Called when someone clicks "Run".
-      function loadPlayer() {
-        // Lets Flash from another domain call JavaScript
-        var params = { allowScriptAccess: "always" };
-        // The element id of the Flash embed
-        var atts = { id: "ytPlayer" };
-        // All of the magic handled by SWFObject (http://code.google.com/p/swfobject/)
-        swfobject.embedSWF("http://www.youtube.com/apiplayer?" +
-                           "version=3&enablejsapi=1&playerapiid=player1", 
-                           "videoDiv", "480", "295", "9", null, null, params, atts);
-      }
-      function _run() {
-        loadPlayer();
-      }
-      google.setOnLoadCallback(_run);
-    </script>
+    <title>Test facebook share image</title>
+
   </head>
   <body style="font-family: Arial;border: 0 none;">
-    <table>
-    <tr>
-    <td><div id="videoDiv">Loading...</div></td>
-    <td valign="top">
-      <div id="videoInfo">
-        <p>Player state: <span id="playerState">--</span></p>
-        <p>Current Time: <span id="videoCurrentTime">--:--</span> | Duration: <span id="videoDuration">--:--</span></p>
-        <p>Bytes Total: <span id="bytesTotal">--</span> | Start Bytes: <span id="startBytes">--</span> | Bytes Loaded: <span id="bytesLoaded">--</span></p>
-        <p>Controls: <a href="javascript:void(0);" onclick="playVideo();">Play</a> | <a href="javascript:void(0);" onclick="pauseVideo();">Pause</a> | <a href="javascript:void(0);" onclick="muteVideo();">Mute</a> | <a href="javascript:void(0);" onclick="unMuteVideo();">Unmute</a></p>
-        <p><input id="volumeSetting" type="text" size="3" />&nbsp;<a href="javascript:void(0)" onclick="setVideoVolume();">&lt;- Set Volume</a> | Volume: <span id="volume">--</span></p>
-      </div>
-    </td></tr>
-    </table>
+    <img src="http://s1.it.reastatic.net/rs/img/logos/casa_small.png$$174.3121-7" alt="Casa.it homepage">
+    <img src="http://images1.it.reastatic.net/456x342/props/92115/25558800/1/EDWPRJW.jpg" width="456" height="342" data-index="0" alt="Via Guerrazzi, GENOVA GE" title="Via Guerrazzi, GENOVA GE">
+    <img src="http://images2.it.reastatic.net/456x342/props/92115/25558800/2/HZPSNOL.jpg" width="456" height="342" data-index="1" alt="Via Guerrazzi, GENOVA GE" title="Via Guerrazzi, GENOVA GE" style="opacity: 1;">
+    <img src="http://images1.it.reastatic.net/456x342/props/92115/25558800/3/0AXY0CL.jpg" width="456" height="342" data-index="2" alt="Via Guerrazzi, GENOVA GE" title="Via Guerrazzi, GENOVA GE" style="opacity: 1;">
+    <img src="http://images1.it.reastatic.net/456x342/props/92115/25558800/5/U0TSSMD.jpg" width="456" height="342" data-index="4" alt="Via Guerrazzi, GENOVA GE" title="Via Guerrazzi, GENOVA GE" style="opacity: 1;">
+    <img src="http://images2.it.reastatic.net/agencylogo/92115/medium/20101028152623.gif" width="160" height="30" alt="IMMOBILIARE Z.B. SRL" title="visualizza tutte le proprietà da IMMOBILIARE Z.B. SRL" class="logo">
+    <img class="img" src="https://fbexternal-a.akamaihd.net/safe_image.php?d=AQD-4aSGdWAKiqgR&amp;url=http%3A%2F%2Fs1.it.reastatic.net%2Frs%2Fimg%2Ficons%2Fphone.png%24%24174.3121-7" width="50" alt="">
+    <img class="img" src="https://fbexternal-a.akamaihd.net/safe_image.php?d=AQCrJh09oTA8Dt5R&amp;url=http%3A%2F%2Fs1.it.reastatic.net%2Frs%2Fimg%2Fphotogallery%2Fclose_trans.png%24%24174.3121-7" width="50" alt="">
+    <img class="img" src="https://fbexternal-a.akamaihd.net/safe_image.php?d=AQBqL-P-sTx8K9Kj&amp;url=http%3A%2F%2Fs1.it.reastatic.net%2Frs%2Fimg%2Farrows%2Fprev_dis.png%24%24174.3121-7" width="50" alt="">
   </body>
 </html>
 ​
